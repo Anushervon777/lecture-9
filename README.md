@@ -55,3 +55,42 @@ async function main() {
 
 main();
 ```
+
+HTTP ва HTTPS протоколҳои асосии веб мебошанд. API ба барномаҳо имкон медиҳад бо ҳамдигар муошират кунанд, ва REST API яке аз меъёрҳои маъмул барои ин кор мебошад. Бо истифода аз JavaScript, мо метавонем ба осонӣ бо API-ҳо кор кунем ва маълумотро интиқол диҳем.
+// HTTP GET барои гирифтани маълумот
+fetch('https://api.example.com/items')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+
+// HTTP POST барои фиристодани маълумот
+fetch('https://api.example.com/items', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ name: 'Item' })
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error('Error:', error));
+```
+# HTTP, HTTPS, API ва REST API дар JavaScript
+
+## Муқаддима
+
+# Интернет асосан ба воситаи протоколҳои HTTP ва HTTPS кор мекунад. Бо истифода аз API-ҳо (Application Programming Interface) барномаҳо метавонанд бо ҳамдигар муошират кунанд. REST API яке аз меъёрҳои маъмул барои сохтан ва истифода бурдани API-ҳо мебошад.
+
+## HTTP ва HTTPS
+
+**HTTP (HyperText Transfer Protocol) протокол барои интиқоли маълумот дар веб мебошад. HTTP пайвастагии осебпазир аст ва маълумотро бе рамзгузорӣ интиқол медиҳад.**
+
+**HTTPS (HyperText Transfer Protocol Secure) як версияи амншудаи HTTP мебошад. HTTPS маълумотро рамзгузорӣ мекунад, ки ин бехатарии онро таъмин мекунад.** 
+
+### Мисол бо HTTP дар JavaScript
+```javascript
+fetch('http://example.com/data')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+```
